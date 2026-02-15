@@ -1,2 +1,10 @@
-# DSA-Mastery-CPP
-Clean C++ implementations of Data Structures and Algorithms
+# DSA Mastery (C++)
+A collection of robust Data Structures and Algorithm implementations. This repository focuses on clean code, efficiency and core computer science fundamentals.
+
+## Contents
+- Stacks(Array Implementation)
+- Queues
+- Linked lists
+- Trees and Graphs
+
+*"Bad programmers worry about the code. Good Programmers worry about data structures and their relationships."*   
