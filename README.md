@@ -2,9 +2,9 @@
 A collection of robust Data Structures and Algorithm implementations. This repository focuses on clean code, efficiency and core computer science fundamentals.
 
 ## Contents
-- Stacks(Array Implementation)
-- Queues
-- Linked lists
-- Trees and Graphs
+-[x] Stacks(Array Implementation)
+-[x]Queues
+-[] Linked lists
+-[] Trees and Graphs
 
 *"Bad programmers worry about the code. Good Programmers worry about data structures and their relationships."*   
