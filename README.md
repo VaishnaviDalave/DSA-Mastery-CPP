@@ -3,7 +3,7 @@ A collection of robust Data Structures and Algorithm implementations. This repos
 
 ## Contents
 - [x] Stacks(Array Implementation)
-- [x]Queues
+- [x] Queues
 - [x] Linked lists
 - [] Trees and Graphs
 
