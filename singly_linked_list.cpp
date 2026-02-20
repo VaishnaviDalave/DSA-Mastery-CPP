@@ -19,31 +19,26 @@ public:
         head = newNode;
     }
 
-    // NEW: Delete a node by value
-    void deleteNode(int key) {
-        Node *temp = head, *prev = NULL;
-
-        // Case 1: If head node itself holds the key
-        if (temp != NULL && temp->data == key) {
-            head = temp->next;
-            delete temp;
-            cout << "Deleted " << key << endl;
-            return;
+    // NEW: Search for a value
+    bool search(int key) {
+        Node* current = head;
+        while (current != NULL) {
+            if (current->data == key) return true;
+            current = current->next;
         }
+        return false;
+    }
 
-        // Case 2: Search for the key
-        while (temp != NULL && temp->data != key) {
-            prev = temp;
-            temp = temp->next;
+    // NEW: Reverse the list (The Interview Favorite)
+    void reverse() {
+        Node *prev = NULL, *current = head, *next = NULL;
+        while (current != NULL) {
+            next = current->next; // Store next
+            current->next = prev; // Reverse pointer
+            prev = current; // Move prev one step
+            current = next; // Move current one step
         }
-
-        // Case 3: Key not found
-        if (temp == NULL) return;
-
-        // Unlink the node from linked list
-        prev->next = temp->next;
-        delete temp;
-        cout << "Deleted " << key << endl;
+        head = prev;
     }
 
     void display() {
@@ -62,13 +57,14 @@ int main() {
     list.insertAtFront(20);
     list.insertAtFront(10);
     
-    cout << "Before deletion: ";
+    cout << "Original List: ";
     list.display();
     
-    list.deleteNode(20); // Deleting middle element
-    
-    cout << "After deletion: ";
+    list.reverse();
+    cout << "Reversed List: ";
     list.display();
+    
+    cout << "Searching for 20: " << (list.search(20) ? "Found" : "Not Found") << endl;
     
     return 0;
 }
